@@ -64,7 +64,7 @@ typedef enum
  Section: Global Variables
 */
 
-volatile uint8_t    I2C_slaveWriteData      = 0x55;
+volatile int    I2C_slaveWriteData      = 0x55;
 
 /**
  Section: Local Functions
@@ -108,7 +108,7 @@ void I2C_Initialize(void)
 
 void I2C_ISR ( void )
 {
-    uint8_t     i2c_data                = 0x55;
+    int     i2c_data                = 0x55;
 
 
     // NOTE: The slave driver will always acknowledge

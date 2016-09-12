@@ -137,7 +137,7 @@ void I2C_ISR ( void );
         This varible contains the last data written to the I2C slave
 */
 
-extern volatile uint8_t    I2C_slaveWriteData;
+extern volatile int    I2C_slaveWriteData;
 
 
 #ifdef __cplusplus  // Provide C++ Compatibility

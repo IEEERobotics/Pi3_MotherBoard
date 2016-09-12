@@ -23,7 +23,6 @@ extern "C" {
 #define CMD 1
 #define MOTOR 2
 #define MOTOR_HEADER 0xAA
-#define MOTOR4 4
 #define FORWARD_MOTOR1() APH_1_SetHigh()
 #define FORWARD_MOTOR2() BPH_1_SetHigh()
 #define FORWARD_MOTOR3() APH_2_SetHigh()

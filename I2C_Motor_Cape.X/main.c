@@ -48,10 +48,10 @@
 
 
 extern int motor_value;
-int I2C_data;
+int8_t I2C_data;
 uint8_t i2c_data_rdy = 0;
 int motor_index;
-int i2c_buffer[12];
+int8_t i2c_buffer[12];
 
 /*
                          Main application
@@ -97,7 +97,7 @@ void main(void)
                     break;
                 
                 case MOTOR:
-                 i2c_buffer[motor_index] = I2C_data;
+                 i2c_buffer[motor_index] = (int8_t) I2C_data;
                  motor_index++;
                  if(motor_index == 4)
                  {

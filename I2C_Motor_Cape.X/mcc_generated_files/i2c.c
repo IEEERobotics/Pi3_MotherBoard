@@ -51,7 +51,7 @@
 
 int motor_value;
 uint8_t count = 0;
-extern int I2C_data;
+extern int8_t I2C_data;
 extern uint8_t i2c_data_rdy;
 
 typedef enum
@@ -64,7 +64,7 @@ typedef enum
  Section: Global Variables
 */
 
-volatile int    I2C_slaveWriteData      = 0x55;
+volatile  uint8_t    I2C_slaveWriteData      = 0x55;
 
 /**
  Section: Local Functions
@@ -108,7 +108,7 @@ void I2C_Initialize(void)
 
 void I2C_ISR ( void )
 {
-    int     i2c_data                = 0x55;
+    uint8_t     i2c_data                = 0x55;
 
 
     // NOTE: The slave driver will always acknowledge
@@ -135,6 +135,7 @@ void I2C_ISR ( void )
 
         // callback routine should prepare to receive data from the master
         I2C_StatusCallback(I2C_SLAVE_WRITE_REQUEST);
+        
     }
     else
     {

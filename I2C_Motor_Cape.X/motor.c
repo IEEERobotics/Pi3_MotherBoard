@@ -3,7 +3,7 @@
 #include "motor.h"
 #include "mcc_generated_files/mcc.h"
 
-extern int i2c_buffer[12];
+extern int8_t i2c_buffer[12];
 
 void set_motor_values(void)
 {
